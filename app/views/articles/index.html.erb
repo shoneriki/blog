@@ -2,7 +2,8 @@
 
 <ul>
   <% @articles.each do |article| %>
-    <li><%= article.title %></li>
-    <p><%= article.body %></p>
+    <li>
+      <%= link_to "Read This Article", article  %>
+    </li>
   <% end %>
 </ul>
