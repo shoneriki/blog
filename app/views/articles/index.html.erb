@@ -3,7 +3,9 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <%= link_to "Read This Article", article%>
+      <%= link_to article.title, article%>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "New Article Submission?", new_article_path  %>
