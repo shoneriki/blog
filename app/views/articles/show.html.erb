@@ -10,8 +10,12 @@
 
 <h2>Comments</h2>
 
-<% @article.comments.each do |comment| %>
-  <%= render @article.comments %>
+<% if @article.comments.present? %>
+  <%= return "no comments" %>
+<% else %>
+  <% @article.comments.each do |comment| %>
+    <%= render @article.comments %>
+  <% end %>
 <% end %>
 
 <h2>Add A Comment Here:</h2>
