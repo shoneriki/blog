@@ -3,9 +3,9 @@
 
 <%= render "form", article: @article %>
 
-<%#= @article.errors.full_messages_for(:title).each do |message| %>
-  <%#= message %>
-<%# end %>
-<%#= @article.errors.full_messages_for(:body).each do |message| %>
-  <%#= message %>
-<%# end %>
+<% @article.errors.full_messages_for(:title).each do |message| %>
+  <%= message %>
+<% end %>
+<% @article.errors.full_messages_for(:body).each do |message| %>
+  <%= message %>
+<% end %>
