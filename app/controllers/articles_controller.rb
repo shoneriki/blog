@@ -33,7 +33,9 @@ before_action :set_article, only: [:show, :edit, :update, :destroy ]
   end
 
   def destroy
+    @article = Article.find(params[:id])
     @article.destroy
+
     redirect_to root_path
   end
 
