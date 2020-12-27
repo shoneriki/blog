@@ -11,12 +11,8 @@
 <h2>Comments</h2>
 
 <% @article.comments.each do |comment| %>
-  
+  <%= render @article.comments %>
 <% end %>
 
 <h2>Add A Comment Here:</h2>
-<%= simple_form_for [@article, @article.comments.build] do |f| %>
-  <%= f.input :commenter %>
-  <%= f.input :body, as: :text %>
-  <%= f.button :submit %>
-<% end %>
+  <%= render "comments/form" %>
